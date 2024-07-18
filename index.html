@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض رسالة</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        #message {
+            display: none;
+            font-size: 100px; /* حجم الرسالة */
+            color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #showMessageButton {
+            padding: 20px 40px; /* حجم الزر */
+            font-size: 24px; /* حجم نص الزر */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="showMessageButton">جرب اضغط كده</button>
+    <div id="message">كنت مستني ايه</div>
+
+    <script>
+        const button = document.getElementById('showMessageButton');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            button.style.display = 'none';
+            message.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
